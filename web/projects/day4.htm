@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navabar</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(40, 40, 40);
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        li{
+            list-style-type: none;
+            font-size: 17px;
+            color: rgb(82, 82, 82);
+        }
+        nav{
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 150px;
+        }
+        .list ul {
+            display: flex;
+            gap: 40px;
+        }
+        .list ul li {
+            list-style-type: none;
+            cursor: pointer;
+        }
+        .list ul li img {
+            vertical-align: middle;
+        }
+        .list ul li:hover{
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px 20px;
+            }
+            .list {
+                width: 100%;
+            }
+            .list ul {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+            .list ul li {
+                text-align: left;
+                width: 100%;
+                padding: 10px 0;
+                border-bottom: 1px solid rgb(220, 220, 220);
+            }
+            .list ul li:last-child {
+                border-bottom: none;
+            }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="UE-Logo-1.webp" alt="logo" width="180px" height="60px">
+        </div>
+        <div class="list">
+            <ul>
+                <li>Products</li>
+                <li>For Business</li>
+                <li>Resourses</li>
+                <li>Support</li>
+                <li>Our Company</li>
+                <li><img src="foreign-language-line-icon-free-vector.jpg" alt="lang" width="25px" height="20px"></li>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Google_Magnifying_Glass.svg/2048px-Google_Magnifying_Glass.svg.png" width="25px" height="25px" alt=""></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

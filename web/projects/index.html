@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        application form
+    </title>
+    <style>
+        body {
+            background-color: #05c46b;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+        }
+
+        form {
+            background-color: aliceblue;
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-shadow: 2px 5px 10px rgba(0, 0, 0, 1);
+        }
+
+        .align {
+            text-align: left;
+            margin-bottom: 25px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form input,
+        .form select,
+        .form textarea {
+            font-family: inherit;
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form input[type="radio"],
+        .form input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+
+        button {
+            background-color: #05c46b;
+            border: 1px solid #777;
+            border-radius: 2px;
+            font-family: inherit;
+            font-size: 21px;
+            display: block;
+            width: 100%;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GeeksforGeeks Survey Form</h1>
+    <form id="form">
+        <div class="align">
+            <label for="name">
+                Name:
+            </label>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name Here">
+        </div>
+        <div class="align">
+            <label for="email">
+                Email:
+            </label>
+            <input type="text" name="email" id="email" placeholder="Enter Your Email Here">
+        </div>
+        <div class="align">
+            <label for="Age">
+                Age:
+            </label>
+            <input type="number" name="age" id="age" placeholder="Enter your Age">
+        </div>
+        <div class="align">
+            <label for="option">Which option best describes you:</label>
+            <select name="option" id="option">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="align">
+            <label>Would you recommed GeeksforGeeks to a friend:</label>
+            <label for="recommed-1">
+                <input type="radio" id="recommed-1" value="Yes" name="recommed">Yes
+            </label>
+            <label for="recommed-2">
+                <input type="radio" id="recommed-2" value="No" name="recommed">No
+            </label>
+            <label for="recommed-3">
+                <input type="radio" id="recommed-3" value="Maybe" name="recommed">May be
+            </label>
+        </div>
+        <div class="align">
+            <label for="">Languages and Frameworks known:</label>
+            <label for="inp-1">
+                <input type="checkbox">Cpp
+            </label>
+            <label for="inp-2">
+                <input type="checkbox">C
+            </label>
+            <label for="inp-3">
+                <input type="checkbox">html
+            </label>
+            <label for="inp-4">
+                <input type="checkbox">css
+            </label>
+            <label for="inp-5">
+                <input type="checkbox">javascript
+            </label>
+        </div>
+        <div class="align">
+            <label for="comments">Any Comments and Suggestions</label>
+            <textarea name="comment" id="comment"></textarea>
+        </div>
+        <button type="submit" value="submit">Submit</button>
+    </form>
+
+</body>
+
+</html>

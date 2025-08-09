@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid-column</title>
+    <style>
+
+        .grid {
+            background-color: white;
+            display: grid;
+            height: 900px;
+            width: 1600px;
+            grid-template-rows: repeat(13, 1fr);
+            grid-template-columns:  repeat(13,1fr);
+            grid-gap: 10px;
+        }
+
+        .box{
+            background-color: pink;
+            
+        }
+
+        .header{
+            grid-column: 1/13;
+        }
+
+        .sidebar{
+            grid-row: 2/10;
+            grid-column: 1/5;
+        }
+        
+        .nav{
+            grid-column: 5/10;
+        }
+        .main{
+            grid-column: 5/10;
+            grid-row: 3/10;
+        }
+        .ads{
+            grid-row:2/10;
+            grid-column: 10/13;
+        }
+        .footer{
+            grid-column: 1/13;
+        }
+        @media only screen and (max-width:720px){
+            .header{
+                grid-column: 1/10;
+            }
+            .nav{
+                grid-column: 1/10;
+            }
+            .sidebar{
+                grid-row:3/10;
+                grid-column: 1/3;
+            }
+            .main{
+                grid-row: 3/10;
+                grid-column: 3/10;
+            }
+            .ads{
+                grid-column: 1/3;
+                grid-row: 10;
+            }
+            .footer{
+                grid-column: 3/10;
+            }
+        }
+            
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="box header">Header</div>
+        <div class="box sidebar">sidebar</div>
+        <div class="box nav">navbar</div>
+        <div class="box ads">Ads</div>
+        <div class="box main">main</div>
+        <div class="box footer">footer</div>
+    </div>
+</body>
+
+</html>

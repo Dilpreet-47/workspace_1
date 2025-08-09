@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whimsical.com/home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/phosphor-icons@1.4.2/src/css/icons.min.css">
+    <style>
+        body {
+            min-height: 200vh;
+        }
+
+        #semicircle {
+            #semicircle {
+                width: 70%;
+                height: 80vh;
+                background-color: #1E293B;
+                border-radius: 50% 50% 0 0;
+                position: relative;
+                /* Changed from fixed */
+                margin: 0 auto;
+                transition: all 0.6s ease-in-out;
+                overflow-y: auto;
+                /* Enables scrolling inside the semicircle */
+                max-height: 100vh;
+                /* Prevents it from exceeding the screen */
+            }
+
+        }
+    </style>
+</head>
+
+<body class="font-inter">
+    <header class="flex justify-center mt-9 z-10">
+        <nav id="navbar"
+            class="flex items-center rounded-2xl shadow-[0px_4px_10px_rgba(0,0,0,0.09)] w-[85%] justify-between hover:shadow-[0px_10px_10px_rgba(0,0,0,0.15)] p-1 duration-300 bg-white">
+            <!-- Left Side (Logo & Links) -->
+            <ul class="flex items-center gap-10 font-semibold text-sm text-[#250835]">
+                <li>
+                    <button id="logo-img">
+                        <img src="assets/logo/logo@108x20@2x.c15ec052.webp" alt="logo" class="h-5 pl-[18px]">
+                    </button>
+                </li>
+                <li><button class="hidden lg:block hover:bg-[#f9f2f9] px-4 py-2 rounded-xl transition">Product</button>
+                </li>
+                <li><button
+                        class="hidden lg:block hover:bg-[#f9f2f9] px-4 py-2 rounded-xl transition">Resources</button>
+                </li>
+                <li><button class="hidden lg:block hover:bg-[#f9f2f9] px-4 py-2 rounded-xl transition">Pricing</button>
+                </li>
+            </ul>
+
+            <!-- Right Side (Buttons) -->
+            <ul class="flex items-center gap-5 font-semibold text-sm">
+                <button class="hidden lg:block hover:bg-[#f9f2f9] px-4 py-2 rounded-xl transition">Contact
+                    Sales</button>
+                <button class="bg-[#f9f2f9] px-4 py-2 rounded-xl hover:text-white transition hover:bg-[#250835]">
+                    Log in
+                </button>
+                <button
+                    class="flex items-center justify-end gap-2 bg-[#250835] text-white px-[6px] py-[6px] rounded-xl hover:bg-[#3b0470] transition duration-300 text-[#250835] ">
+                    <i class="fa-solid fa-arrow-right text-[#250835] bg-white rounded-lg p-[8px] m-[0]"></i>
+                    Sign up
+                </button>
+            </ul>
+            <button id="menu-toggle" class="lg:hidden mr-5">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+            <div id="mobile-menu"
+                class="hidden bg-white shadow-lg w-1/2 p-4 absolute top-20 left-1/2 transform -translate-x-1/2 rounded-2xl text-[#250835] z-10">
+                <h5>Tools</h5>
+                <ul class="flex flex-col gap-4 text-[#250835]">
+                    <li><a href="#" class="hover:text-gray-500">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-500">About</a></li>
+                    <li><a href="#" class="hover:text-gray-500">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Semicircle Section -->
+    <div id="semicircle"
+        class="flex justify-center items-center flex-col  overflow-hidden bg-cover bg-center bg-no-repeat  
+           bg-[url('https://static.vecteezy.com/system/resources/previews/008/935/566/non_2x/beautiful-gradient-background-of-blue-pink-and-purple-color-smooth-and-soft-texture-free-vector.jpg')]">
+
+        <div id="inside-semicircle" class=" flex flex-col mt-[15%] items-center gap-5 w-[500px]">
+            <h2
+                class=" flex items-center justify-center text-4xl md:text-5xl font-bold text-white text-center max-w-[80%]">
+                Less distraction,<br> more traction</h2>
+            <p class="flex items-center justify-center text-white text-center">Work calmly in one interconnected <br>
+                workspace with Whimsical.</p>
+            <button class="flex justify-center items-center rounded-xl  px-[15px] py-[7px] bg-white gap-2 font-bold ">
+                Get Started Free
+                <i class="fa-solid fa-arrow-right  bg-[#250835] text-white rounded-lg p-[8px] m-[0]"></i>
+            </button>
+        </div>
+
+        <div class="flex items-start gap-[10px] text-[#250835] text-[14px] mt-[8%] mx-10 md:mx-10">
+            <div class="flex flex-col bg-white p-[10px] rounded-xl">
+                <div class="flex gap-1 items-center">
+                    <i class="ph ph-kanban items-baseline"></i> <strong>Projects</strong>
+                </div>
+                <p>An Integerated Project Space for <br> tasks, docs, and communicaton.</p>
+            </div>
+            <div class="flex flex-col bg-white p-[10px] rounded-xl">
+                <div class="flex gap-2 items-center">
+                    <i class="fa-solid fa-tv"></i><strong>Boards</strong>
+                </div>
+                <p>An Infinite Canvas for diagrams, <br> wireframes, and whiteboards.</p>
+
+            </div>
+            <div class="flex flex-col bg-white p-[10px] rounded-xl">
+                <div class="flex gap-2 items-center">
+                    <i class="fa-solid fa-book"></i><strong>Docs</strong>
+
+                </div>
+                <p>Clutter free docs to align your <br> team and move work forward.</p>
+            </div>
+
+            <div class="flex flex-col bg-white p-[10px] rounded-xl">
+                <div class="flex gap-2 items-center">
+                    <img src="assets/logo/cast.png" alt="cast" class="w-[15px] h-[15px] "> <strong>Posts</strong>
+                </div>
+                <p>A mindful approach to team <br> communication free from noise.</p>
+            </div>
+        </div>
+
+        <div class="flex flex-col text-white text-center mt-5">
+            <p class="text-lg">More content here...</p>
+            <p class="text-lg">More content here...</p>
+            <p class="text-lg">More content here...</p>
+            <p class="text-lg">More content here...</p>
+            <p class="text-lg">More content here...</p>
+            <p class="text-lg">More content here...</p>
+            <p class="text-lg">More content here...</p>
+            <p class="text-lg">More content here...</p>
+            <p class="text-lg">More content here...</p>
+        </div>
+        
+    </div>
+
+
+
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        let semicircle = document.getElementById("semicircle");
+
+        window.addEventListener("scroll", () => {
+            let currentScrollY = window.scrollY;
+            let scrollFactor = Math.min(currentScrollY / (window.innerHeight * 0.8), 1);
+
+            let width = 70 + scrollFactor * 30;
+            let height = 80 + scrollFactor * 30;
+            let bottomOffset = scrollFactor * 10;
+
+            semicircle.style.width = `${Math.min(width, 100)}%`;
+            semicircle.style.height = `${Math.min(height, 100)}vh`;
+            semicircle.style.bottom = `${Math.max(-bottomOffset, 0)}vh`;
+            semicircle.style.transform = `translateX(-50%)`;
+
+            // Adjust border-radius dynamically
+            let borderRadius = `${50 - scrollFactor * 50}% ${50 - scrollFactor * 50}% 0 0`;
+            semicircle.style.borderRadius = borderRadius;
+        });
+    </script>
+</body>
+
+</html>

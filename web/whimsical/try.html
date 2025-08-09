@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Semicircle Section -->
+    <div id="semicircle" class="fixed bottom-0 left-1/2 transform -translate-x-1/2 flex items-center justify-center text-center 
+       overflow-hidden bg-cover bg-center bg-no-repeat transition-all duration-500 ease-in-out"
+        style="width: 70%; height: 80vh; background-image: url('https://static.vecteezy.com/system/resources/previews/008/935/566/non_2x/beautiful-gradient-background-of-blue-pink-and-purple-color-smooth-and-soft-texture-free-vector.jpg'); border-radius: 50% 50% 0 0; z-index: 1;">
+        <h2 id="semicircle-text" class="text-4xl md:text-5xl font-bold text-white transition-all duration-500">
+            Less distraction,<br> more traction
+        </h2>
+    </div>
+
+    <script>
+        let semicircle = document.getElementById("semicircle");
+        let text = document.getElementById("semicircle-text");
+
+        window.addEventListener("scroll", () => {
+            let currentScrollY = window.scrollY;
+            let scrollFactor = Math.min(currentScrollY / (window.innerHeight * 0.8), 1);
+
+            // Expanding Semicircle
+            let width = 70 + scrollFactor * 30;
+            let height = 80 + scrollFactor * 30;
+            let bottomOffset = scrollFactor * 10;
+
+            semicircle.style.width = `${Math.min(width, 100)}%`;
+            semicircle.style.height = `${Math.min(height, 100)}vh`;
+            semicircle.style.bottom = `${Math.max(-bottomOffset, 0)}vh`;
+
+            // Scaling Text to Stay Centered
+            let textScale = 1 - scrollFactor * 0.2; // Shrinks text slightly
+            text.style.transform = `scale(${textScale})`;
+        });
+    </script>
+
+</body>
+
+</html>

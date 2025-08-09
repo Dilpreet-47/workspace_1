@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: black;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+        .list ul {
+            display: flex;
+            gap: 20px;
+        }
+        .list ul li {
+            list-style-type: none;
+            cursor: pointer;
+        }
+        .list ul li img {
+            vertical-align: middle;
+        }
+        .list ul li:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <img src="UE-Logo-1.webp" alt="Company Logo" width="180px" height="60px">
+        </div>
+        <div class="list">
+            <ul>
+                <li>Products</li>
+                <li>For Business</li>
+                <li>Resources</li>
+                <li>Support</li>
+                <li>Our Company</li>
+                <li><img src="foreign-language-line-icon-free-vector.jpg" alt="Language Selector" width="25px" height="20px"></li>
+                <li><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Google_Magnifying_Glass.svg/2048px-Google_Magnifying_Glass.svg.png" alt="Search Icon" width="25px" height="25px"></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>

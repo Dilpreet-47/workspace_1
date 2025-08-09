@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+            background-color: #f3f4f6;
+        }
+
+        #semicircle {
+            width: 70%;
+            height: 80vh;
+            background-color: #1E293B;
+            border-radius: 50% 50% 0 0;
+            position: fixed;
+            bottom: 0;
+            transform: translateX(-50%);
+            transition: all 0.6s ease-in-out;
+            z-index: 10;
+            left: 50%;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="semicircle"></div>
+</body>
+
+<script>
+    let semicircle = document.getElementById("semicircle");
+
+    window.addEventListener("scroll", () => {
+        let currentScrollY = window.scrollY;
+        let scrollFactor = (currentScrollY / window.innerHeight);
+
+        let width = 70 + scrollFactor * 30;
+        let height = 80 + scrollFactor * 30;
+        let bottomOffset = scrollFactor * 10;
+
+        semicircle.style.width = `${Math.min(width, 100)}%`;
+        semicircle.style.height = `${Math.min(height, 100)}vh`;
+        semicircle.style.bottom = `${-bottomOffset}vh`;
+        // semicircle.style.transform = `translateX(-50%)`;
+    });
+</script>
+
+</html>

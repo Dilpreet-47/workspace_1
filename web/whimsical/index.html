@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whimsical.com/home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200vh;
+            background-color: #f3f4f6;
+        } */
+        body {
+            min-height: 200vh;
+        }
+
+        #semicircle {
+            width: 70%;
+            height: 80vh;
+            background-color: #1E293B;
+            border-radius: 50% 50% 0 0;
+            position: fixed;
+            bottom: 0;
+            transform: translateX(-50%);
+            transition: all 0.6s ease-in-out;
+            z-index: 1;
+            left: 50%;
+            /* overflow: hidden; */
+
+        }
+    </style>
+</head>
+
+<body class="font-inter">
+    <header class="flex justify-center mt-9 z-10">
+        <nav id="navbar"
+            class="flex items-center rounded-2xl shadow-[0px_4px_10px_rgba(0,0,0,0.09)] w-[85%] justify-between hover:shadow-[0px_10px_10px_rgba(0,0,0,0.15)] p-0 duration-300 bg-white p-1">
+            <!-- Left Side (Logo & Links) -->
+            <ul class="flex items-center gap-10 font-semibold text-sm text-[#250835]">
+                <li>
+                    <button id="logo-img">
+                        <img src="assets/logo/logo@108x20@2x.c15ec052.webp" alt="logo" class="h-5 pl-[18px]">
+                    </button>
+                </li>
+                <li><button
+                        class="hidden lg:block hover:bg-[#f9f2f9] px-[14px] py-[10px] rounded-xl transition">Product</button>
+                </li>
+                <li><button
+                        class="hidden lg:block hover:bg-[#f9f2f9] px-[14px] py-[10px] rounded-xl transition">Resources</button>
+                </li>
+                <li><button
+                        class="hidden lg:block hover:bg-[#f9f2f9] px-[14px] py-[10px] rounded-xl transition">Pricing</button>
+                </li>
+            </ul>
+
+            <!-- Right Side (Buttons) -->
+
+            <ul class="flex items-center gap-5 font-semibold text-sm  py-0">
+                <button class="hidden lg:block hover:bg-[#f9f2f9] px-[14px] py-[10px] rounded-xl transition">Contact
+                    sales</button>
+                <button
+                    class="justify-end lg bg-[#f9f2f9] px-[14px] py-[10px] rounded-xl hover:text-white transition hover:bg-[#250835]">Log
+                    in</button>
+                <button
+                    class="flex items-center justify-end gap-2 bg-[#250835] text-white px-[6px] py-[6px] rounded-xl hover:bg-[#3b0470] transition duration-300 text-[#250835] ">
+                    <i class="fa-solid fa-arrow-right text-[#250835] bg-white rounded-lg p-[8px] m-[0]"></i>
+                    Sign up
+                </button>
+
+            </ul>
+            <button id="menu-toggle" class="lg:hidden flex justify-right mr-[19px]"><i
+                    class="fa-solid fa-bars text-[23px] "></i></button>
+            <div id="mobile-menu"
+                class="hidden bg-white shadow-lg w-[55%] p-4 absolute top-25 left-0 ml-[37%] rounded-2xl text-[#250835] z-2">
+                <h5>Tools</h5>
+                <ul class="flex flex-col gap-4 text-[#250835]">
+                    <li><a href="#" class="hover:text-gray-500">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-500">About</a></li>
+                    <li><a href="#" class="hover:text-gray-500">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div id="semicircle" class="bg-[url(https://static.vecteezy.com/system/resources/previews/008/935/566/non_2x/beautiful-gradient-background-of-blue-pink-and-purple-color-smooth-and-soft-texture-free-vector.jpg)] overflow-hidden">
+        
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+        let semicircle = document.getElementById("semicircle");
+        
+        window.addEventListener("scroll", () => {
+            let currentScrollY = window.scrollY;
+            let scrollFactor = Math.min(currentScrollY / (window.innerHeight * 0.8), 1);
+
+            let width = 70 + scrollFactor * 30;
+            let height = 80 + scrollFactor * 30;
+            let bottomOffset = scrollFactor * 10;
+
+            semicircle.style.width = `${Math.min(width, 100)}%`;
+            semicircle.style.height = `${Math.min(height, 100)}vh`;
+            semicircle.style.bottom = `${Math.max(-bottomOffset, 0)}vh`;
+            semicircle.style.transform = `translateX(-50%)`; 
+            semicircle.style.border= 
+        });
+
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+    <style>
+
+        .Welcome {
+
+            border: 1px solid black;
+            background-color: aqua;
+            width: 600px;
+            height: 300px;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(5, 1fr)
+        }
+
+        .hello {
+            text-align: center;
+            border: 1px solid black;
+
+            background-color: blanchedalmond;
+        }
+
+        .W2 {
+            background-color: palevioletred;
+            display: grid;
+            width: 800px;
+            height: 400px;
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: repeat(6, 1fr);
+            margin: 40px;
+            grid-gap: 10px 10px;
+
+        }
+
+        .hi {
+            background-color: lightgoldenrodyellow;
+            border: 1px solid blue;
+            text-align: center;
+
+        }
+
+        .one {
+            grid-column: 1/3;
+            grid-row: 1/4;
+        }
+
+        .third {
+            animation-name: Colorchange; 
+            animation-duration: 3s;
+            animation-delay: 0;
+            animation-iteration-count: infinite; 
+            animation-direction:alternate;
+            animation-timing-function: ease-in;
+        }
+
+        @keyframes Colorchange {
+            from {
+                background-color: goldenrod;
+            }
+
+            to {
+                background-color: brown;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Welcome">
+        <div class="hello">hello</div>
+        <div class="hello">hello</div>
+        <div class="hello">hello</div>
+        <div class="hello">hello</div>
+        <div class="hello">hello</div>
+        <div class="hello">hello</div>
+    </div>
+    <div class="W2">
+        <div class="hi one">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+        <div class="hi">Hi</div>
+
+    </div>
+    <div class="third">
+        <h3>Fucj </h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt accusantium dignissimos ratione, quos
+            excepturi quas odio officiis voluptas eveniet ea quis facilis veniam, recusandae quisquam dolores libero eos
+            asperiores eligendi qui. Vel cum optio repellendus. Modi similique alias iure libero est optio eos,
+            voluptatum possimus commodi. Quisquam illum eveniet modi autem, ducimus, ipsa blanditiis amet veniam, fugit
+            dolorum placeat omnis eligendi perspiciatis quo quis at ut eum similique harum asperiores corporis
+            temporibus ab. Eveniet fugit sunt quo nulla alias? A laudantium libero dicta, distinctio consectetur ipsam
+            laboriosam alias dolorem, nihil eligendi ducimus sunt tempore quam hic, dolorum tempora? Odio, modi
+            obcaecati fuga quam distinctio sed perferendis commodi velit nostrum nobis fugiat iusto alias consequatur.
+            Reiciendis odio cupiditate error aspernatur ut alias? Culpa voluptates, eveniet temporibus soluta sunt, cum
+            molestias sequi sed hic dolorem rem incidunt tenetur ducimus magnam fugiat ad quasi dolorum nobis? Non
+            officiis saepe unde nobis odit harum necessitatibus beatae, id dicta minus ex et cum voluptatum vero,
+            provident quisquam est aliquam adipisci? Aperiam laborum iusto ut temporibus, qui tenetur deleniti quis
+            necessitatibus illo. Natus numquam ipsa similique fuga maiores. Cumque excepturi expedita fugiat impedit,
+            tempora soluta sequi labore alias accusamus. Corporis dolores mollitia placeat possimus blanditiis expedita.
+        </p>
+    </div>
+</body>
+
+</html>

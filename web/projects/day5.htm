@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Home Page</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+        .logo{
+            margin-bottom: 20px;
+        }
+        .search-bar{
+            margin-bottom:20px;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+            gap: 10px;
+            border-radius: 25px;
+            padding: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.27);
+        }
+        .search-bar input{
+            flex: 1;
+            outline: none;
+            border: none;
+            font-size: 17px;
+            width: 590px;  
+            
+        }
+        button{
+            border: none;
+            background-color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }     
+        button:hover{
+            background-color: rgb(210, 210, 210);
+        }  
+        @media (max-width:600px) {
+            .search-bar{
+                padding: 0 15px;
+            }
+            .buttons button {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg"alt="Google logo">
+    </div>
+
+    <div class="search-bar">
+        <div class="glass" style="margin-left: 10px;"><img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Google_Magnifying_Glass.svg/2048px-Google_Magnifying_Glass.svg.png"
+                alt="search-bar" width="20px"></div>
+        <input type="text" placeholder="Search Google or type a URL" >
+    
+
+    <div class="buttons">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button>
+    </div>
+</div>
+</body>
+
+</html>
